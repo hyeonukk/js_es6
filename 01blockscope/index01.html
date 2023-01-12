@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+
+    </ul>
+
+    <script>
+        let x=1;
+        //let x =1; let변수는 중복선언이 불가능하다.
+        //let변수는 중괄호 스코프를 갖게된다.(중괄호 안에서만 값을 받는다.)
+        if(true) {
+            let x = 10;
+            console.log(x); //10
+        }
+        console.log(x); //1
+
+        // 사용잘 안하는 문법
+        // var lis = document.querySelectorAll(".list li");
+        // for(var i=0; i<lis.length; i++) {
+        //     (function(x) {
+        //         lis[x].onclick = function() {
+        //             console.log(i);
+        //         }
+        //     })(i);
+        // }
+
+        let lis = document.querySelectorAll(".list li"); 
+        for(let i =0; i<lis.length; i++) {
+            lis[i].onclick = function() {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

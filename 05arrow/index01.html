@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //익명함수
+        // var a  = function() {
+        //     console.log("A실행");
+        // }
+         
+        //익명함수를 화살표 함수로 바꾼것.
+        let a = () => {
+            console.log("a실행");
+        }
+        a();
+
+        /*
+        1.문법1 - 코드가 한줄이면 {} 생략이 됩니다. 
+        {}를 생략하면 자동으로 return이 붙는다.
+        */
+       let b1 = () => console.log("b실행");
+       b1();
+       
+       let b2 = (a,b,c) => a+b+c;
+           console.log(b2(1,2,3));
+        
+        let b3 = (a = 10) =>a +100;
+        console.log(b3());
+        console.log(b3(20));
+
+        /*
+        문법2 - 매개변수가 1개라면 () 생략이 된다.
+        */
+       let c1 = a => a + 10;
+       console.log(c1(10));
+
+       /*
+       문법3 - 객체를 반환할 때는 ()로 묶어줍니다.
+       */
+      let c2 = () => {
+        return {key:1, age:20}
+      };
+
+      let c3 = () => ({key:1, age:20});
+      console.log(c3());
+
+    //
+    //   setInterval(function() {
+    //     console.log(1); 
+    //   }, 1000)
+
+    //   setInterval (() => console.log(1), 1000);
+    //   setInterval (() => {console.log(1)}, 1000);
+    
+
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const gender =  "남자";
+        // gender = "여자";
+        
+        const arr = [1,2,3];
+        // arr = [1]; //배열을 통째로 변경할 수 없음.
+        arr[0] = 10; // 배열의 특정값 변경은 가능/
+        arr.push(4); // 배열에 값 삽입도 가능.
+        arr.push(5);
+        arr.pop();
+        console.log(arr);
+
+        const obj =  {name : "홍길동"};
+        // obj = {name : "이순신"}; //객체를 통째로 변경 못함
+        obj["name"] = "이순신";
+        obj["age"] = 10;
+        console.log(obj);
+    </script>
+</body>
+</html>

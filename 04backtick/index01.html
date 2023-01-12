@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr =["a","b","c"];
+
+        // for(let i in arr) { //기존구문
+        //     console.log(i); //index
+        // }
+        for(let i of arr) { //in을 넣으면 index가 나오고, of를 넣으면 값을 뽑아준다. 
+            console.log(i);
+        }
+
+        for(let i of "hello world") {
+            console.log(i);
+        }
+
+        let person = [
+            {id:"aaa" ,age:10},
+            {id:"bbbb",age:20}
+        ];
+
+        for(let obj of person) {
+            console.log(obj);
+        }
+        for(let {id,age} of person) {
+            console.log(id);
+            console.log(age);
+        }
+        //객체는 반복시킬수 없다. in구문을 사용해야함
+        // let obj ={a:1, b:2} ; 
+        // for(let i of ojb) {
+
+        // }
+    </script>
+</body>
+</html>

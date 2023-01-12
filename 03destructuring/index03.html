@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //json형식에서 디스트럭쳐링 (json : 객체에 대한 표기법)
+        //배열은 대괄호[], 객체는{}로 
+        let list = [
+            {num:1, title:"hello", info:[1,2,3], profile:{birth:"2023"} },
+            {num:2, title:"bye", info:[4,5,6], profile:{birth:"1234"} },
+        
+        ]
+        let [a,b] = list;
+        console.log(b);
+        //두번째 객체의 num,title
+        let [, {num,title}] = list;
+        console.log(num,title);
+        //두번째 객체의 info
+        let [,info] = list;
+        console.log(info);
+        //두번째 객체의 profile
+        let[,{profile}] = list;
+        console.log(profile);
+
+        //두번째 객체의 info를 다른이름으로 가지고 나오기
+        let [,{info:x}] = list;
+        console.log(x);
+
+        //두번째 객체의 info배열의 첫번째 요소만
+        let[,{info:[y1]}] =list;
+        console.log(y1);
+
+        //두번째 객체의 birth값
+        let[,{profile:{birth:aaa}}] =list;
+        console.log(aaa);
+
+        let [,{profile:{birth}}] = list;
+        console.log(birth);
+
+    </script>
+</body>
+</html>

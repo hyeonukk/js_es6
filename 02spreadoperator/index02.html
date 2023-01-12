@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function sum(x,y,z){
+            return x+y+z;
+        }
+        let arr = [1,2,3];
+        //sum(arr[0], arr[1], arr[2]);
+        console.log(sum(...arr)); // x,y,z
+        console.log(sum(10,...arr));
+
+        //함수를 선언시 - 가변적매개변수(반드시 맨 마지막에 선언해야한다.)
+        function sum2(x, ...y) {
+            return [x,...y];
+        }
+        console.log(sum2(1)); //[1]
+        console.log(sum2(1,2)); //[1,2]
+        console.log(sum2(1,2,3)); //[1,2,3]
+        console.log(sum2(1,2,3,4)); //[1,2,3,4]
+
+        //함수의 default매개변수
+        function sum3(x,y=10,z=100) {
+            return x+y+z; 
+        }
+        console.log(sum3(1)); // 1+ 10+ 100
+        console.log(sum3(1,2)); // 1 + 2 +100
+        console.log(sum3(1,2,3,)); // 1+ 2+3
+        console.log(sum3(1,...arr)); //1 + 1,2
+    </script>
+</body>
+</html>

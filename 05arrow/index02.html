@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach(함수,thisArg:옵션)
+        //forEach(function(현재값, 인덱스, 현재배열) {}, thisArg)
+        let arr = ["a","b","c","d"];
+
+        // arr.forEach(function(vaule,index, arr) {
+        //     console.log("값:"+ vaule + ", 인덱스:" + index + ", 현재배열" + arr)
+        // })
+
+        // arr.forEach(function(vaule) {
+        //     console.log(vaule)
+        // })
+        // arr.forEach( (vaule,index,arr) =>{
+        //     console.log(`값 ${vaule}, 인덱스 ${index}, 현재배열 ${arr}`)
+        // })
+        // arr.forEach((vaule =>console.log(vaule) )); //하나만 나타낼때
+
+        //필터함수 - 콜백에 리턴이 true인 값을 이용해서 새로운 배열을 반환
+        //filter(콜백(값,인덱스,현재배열), thisArg)
+        let arr2 = [1,2,3,4,5,6,7,8,9,10];
+        
+    //     let result = arr2.filter(function(a,b,c) { 
+    //         // console.log(a,b,c);
+    //         return a%2==0;
+    //     })
+    //     console.log(result);
+        // let result = arr2.filter( (a) => a %2 == 0 );  
+        // console.log(result);
+        
+        //배열요소중에 o가 들어간 문자열만 필터링
+        // let arr3  = ["melon", "apple", "orange", "grape", "mango"]
+        // // let result =  arr3.filter((x) => x.indexOf('o')!=-1);
+        // let result =  arr3.filter((x) => x.includes('o'));  
+        // console.log(result);
+        
+        //map함수 - 실행한 결과를 가지고 새로운 배열을 만들 때 사용
+        //map(콜백(현재값, 인덱스, 현재배열), thisArg)
+        // let arr4 = [1,3,5,7,9]; 
+        // let result =  arr4.map(function(a,b,c) {
+        //     return a + 1;
+        // } )
+        // console.log(result);
+        
+        // arr4.map((a) => a +1) ;
+        // arr4.map( a => a + 1 ); //한줄짜리는 중괄호 없어도 됨.
+
+        let arr3  = ["melon", "apple", "orange", "grape", "mango"]
+        let result = arr3.filter((x) => x.includes('o')).map((a,b,c)  => `o가 들어간 과일중 ${a}는 ${b+1}번째입니다.`);
+        console.log(result);    
+
+    </script>
+
+    
+</body>
+</html>
