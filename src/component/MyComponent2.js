@@ -1,9 +1,15 @@
-const MyComponent2 =  () => {
-  
-    console.log()
-    return  (
-        <div>안녕하세요  </div>
-    )    
+import { Fragment } from "react";
+
+
+const MyComponent2 = ( {name} ) =>{ 
+
+    return (
+        <Fragment>
+        <div>나의 두번쨰 컴포넌트</div>
+        프롭스값: {name}
+        </Fragment>
+    )
 
 }
+
 export default MyComponent2;

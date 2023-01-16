@@ -1,16 +1,20 @@
 import { Fragment } from "react";
-import MyComponet from "./component/MyComponent";
-import MyComponent2 from "./component/MyComponent2";
-import MyComponent3 from "./component/MyComponent3";
-const App = () => {
-    return (
-        <Fragment>
-        <h3>나의 App.JS</h3>
-        <MyComponet name={"홍길동"} age={20}/>
-        <MyComponent2/>
-        <MyComponent3/>
-        </Fragment>
+import IterationComponent from "./component/IterationComponent";
 
+
+const App =  () => {
+    /* 
+    p.180
+    컴포넌트 반복하기
+    map(콜백(item,index,arr))
+    */
+
+
+    return(
+        <Fragment>
+            <IterationComponent/>
+        </Fragment>
     )
 }
-export default App; //내보내기
+
+export default App;
