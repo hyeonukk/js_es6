@@ -6,6 +6,7 @@ const EventComponent2 = () => {
     //state를 객체로 관리
     const [data, setData] = useState({name : '', topic: ''});
     
+   
     const handleChange = (e) => {
         //객체안에서 key를 바꾸는 방법 ["키"]: 값
         const copy = {...data, [e.target.name]: e.target.value}; //데이터복사

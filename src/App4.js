@@ -6,9 +6,9 @@ import EventComponentQ2 from "./component/EventComponentQ2";
 const App = () => {
     return (
         <>
+        {/* <EventComponentQ/>
         <EventComponent/>
-        <EventComponentQ/>
-        <EventComponent2/>
+        <EventComponent2/> */}
         <EventComponentQ2/>
      
         </>

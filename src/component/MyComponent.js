@@ -19,6 +19,7 @@ import { Fragment } from "react";
 
 const MyComponent = (/* props */ {name, age, email, addr} ) => {
 
+    
     //1st
     //console.log(props);
     // const a = props.name;

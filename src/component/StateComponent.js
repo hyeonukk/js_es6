@@ -22,7 +22,7 @@ const StateComponent = () => {
 
     let [color, setColor] = useState('red');
  
-    
+  
     return (
         <>
         <h3 style={{'color':color}}>state값 : {data}</h3>   {/* 속성명: 변수 */}
