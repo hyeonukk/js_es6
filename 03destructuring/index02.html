@@ -13,12 +13,14 @@
         // console.log(obj["name"]);//기존방식
         // let {name} = obj;
         // console.log(name);
+    
 
         // let{name,age}= obj
         // console.log(name,age);
 
-        let {...arr} = obj; //객체 전체를 갖고옴
-        console.log(arr); 
+        // let {...arr} = obj; //객체 전체를 갖고옴
+        // console.log(arr); 
+        
 
         let person = {
             name:"홍길동",
@@ -26,17 +28,24 @@
             job:["js","java"],
             info:{id:"aaa123"}
         }
+
+        let {age} = person;
+        console.log([age]);
+
+        let {name:aaa, age:bbb} = person;
+        console.log(aaa,bbb)
+  
         // let {name,job}= person;
         // console.log(name,job);
     //    let {name,job,info} = person;
     //    console.log(name,job,info)
 
        //객체의 값을 다른이름으로 가지고 나오기 
-        // let {name:aaa} = person;
-        // console.log(aaa);
+    //     // let {name:aaa} = person;
+    //     // console.log(aaa);
 
-    let {name:bbb, job:jjj} = person;
-        console.log(bbb,jjj);
+    // let {name:bbb, job:jjj} = person;
+    //     console.log(bbb,jjj);
             
 
     </script>

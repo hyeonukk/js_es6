@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //예시) myFetch
+
+        // function myFetch(url) {
+        //     //url을 가지고 처리
+        //     return new Promise(function(success, fail) {
+        //         success("data...");
+        //     } );
+        // }
+
+        // // var result = myFetch("http://www.naver.com");
+        // // console.log(result); //
+
+        // myFetch("http://www.naver.com")
+        // .then(response => {console.log(response)
+        // })
+
+        //async(비동기) - function 앞에 선언하게 되면 return값을 자동으로 Promise변형해준다.
+
+        async function myFetch(url) {
+            return "data..";
+        }
+
+        // var result = myFetch("http://www.naver.com")
+        // console.log(result)
+
+        // myFetch("http://www.naver.com")
+        // .then(response => console.log(response));
+
+        //await(기댜려) - 리턴이 promise라면 await을 적용할 수 있고, then절을 생략할 수 있다. (단, async함수 안에서만 사용 할 수 있다.)
+
+        //기본 js
+        (async function(){
+            let result = await myFetch("http://...")
+            console.log(result)
+        }) ();
+        //기본 js를 ex6문법으로 바꾼것
+        (async () => {
+            let result = await myFetch("http://...")
+            console.log(result)
+        }) ();
+
+    </script>
+    
+</body>
+</html>

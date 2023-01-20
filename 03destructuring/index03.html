@@ -15,13 +15,13 @@
             {num:2, title:"bye", info:[4,5,6], profile:{birth:"1234"} },
         
         ]
-        let [a,b] = list;
-        console.log(b);
+        let [a,b] = list; 
+        console.log(a);
         //두번째 객체의 num,title
         let [, {num,title}] = list;
         console.log(num,title);
         //두번째 객체의 info
-        let [,info] = list;
+        let [,{info}] = list;
         console.log(info);
         //두번째 객체의 profile
         let[,{profile}] = list;
@@ -32,8 +32,8 @@
         console.log(x);
 
         //두번째 객체의 info배열의 첫번째 요소만
-        let[,{info:[y1]}] =list;
-        console.log(y1);
+        let[,{info:[,y1,y2]}] =list;
+        console.log(y1,y2);
 
         //두번째 객체의 birth값
         let[,{profile:{birth:aaa}}] =list;
